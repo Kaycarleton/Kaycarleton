@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>hw3-3 Kcarleton1</title>
+    
+  </head>
+  <body>
+    <h1 class="center">Another Blackjack</h1>
+    <div class="center">
+      <div class="cards">
+        <img alt="card-1" height="200" src="images/cards/green_back.png" id="hidden" />
+        <img alt="card-2" height="200" src="images/cards/green_back.png" />
+        <img alt="card-3" height="200" src="images/cards/green_back.png" />
+        <p class="center result">RESULT</p>
+        <button>Hit</button>
+        <button>Stay</button>
+      </div>
+    </div>
+<script>
+    var dealerSum=0;
+    var yourSum=0;
+
+    var dealerAceCount=0;
+    var yourAceCount=0;
+
+var hidden;
+var deck;
+var canHit=true;
+window.onload=function(){
+    buildDeck();
+    shuffleDeck();
+    startGame();
+}
+function buildDeck(){
+    let values=["A", "2", "3", "4","5","6", "7","8","9","10", "J", "Q", "K"];
+    let types=["C","D","H","S"];
+    deck=[];
+    for (let i=0; i < types.length; i++) {
+for(let j=0; j< values.length; j++){
+    deck.push(values[j]+"-"+ types[i]);
+}
+//console.log(deck);
+    }
+}
+function shuffleDeck(){
+    for(let i=0; i<deck.length; i++){
+        let j=Math.floor(Math.random()* deck.length);
+        let temp=deck[i];
+        deck[i]=deck[j];
+        deck[j]=temp;
+    }
+    console.log(deck);
+}
+function startGame(){
+hidden=deck.pop();
+dealerSum += getValue(hidden);
+dealerAceCount += checkAce(hidden);
+//console.log(hidden);
+//console.log(dealerSum);
+while (dealerSum <17){
+  let cardImg=document.createElement("img");
+  let card=deck.pop();
+  cardImg.src="images/cards/"+card+".png";
+  dealerSum += getValue(card);
+  dealerAceCount += checkAce(card);
+  document.getElementById("dealer-cards").append(cardImg);
+}
+
+console.log(dealerSum);
+
+for (let i=0; i<2; i++) {
+  let cardImg=document.createElement("img");
+  let card=deck.pop();
+  cardImg.src="images/cards/"+card+".png";
+  yourSum += getValue(card);
+  yourAceCount += checkAce(card);
+  document.getElementById("dealer-cards").append(cardImg);
+}
+console.log(yourSum);
+}
+function getValue(card){
+    let data=card.split("-");
+    let value=data[0];
+    if(isNaN(value)){
+      if (value=="A"){
+        return 1;
+      }
+      return 10;
+    }
+    return parseInt(value);
+}
+function checkAce(card){
+  if (card[0]=="A"){
+    return 1;
+  }
+  return 0;
+}
+</script>
+    <!-- You can remove the instructions below -->
+    <div class="instruction">
+      <p>
+        Use internal (or external) JavaScript to implement the features below:
+      </p>
+      <ul>
+        <li>
+          In this version of Blackjack, the player always deals three cards.
+          When the "Hit" button is clicked, the page should be updated replacing
+          the three cards with three random cards facing up. The card images for
+          each value/shape are inside <em>'images/cards'</em> folder.
+        </li>
+        <li>
+          When player's hand (the sum of three cards' values) exceeds 21, the
+          paragraph above "Hit" button (currently showing "RESULT") should show
+          "<strong>You are Busted!</strong>", otherwise it should show "<strong
+            >You are Not Busted!</strong
+          >".
+        </li>
+        <li>
+          The value of cards two through ten is their pip value (2 through 10).
+          Face cards (Jack, Queen, and King) are all worth <strong>10</strong>.
+          To simplify this game, <strong>Ace is always worth 1</strong>.
+        </li>
+        <li>(Optional) Try to make it more interesting.</li>
+      </ul>
+    </div>
+  </body>
+</html>

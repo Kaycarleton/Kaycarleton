@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>hw3-2</title>
+    <link rel="stylesheet" href="css/style.txt" />
+  </head>
+  <body>
+    <h1 class="center">Temperature Unit Converter</h1>
+    <div class="center">
+      <form action="" method="post">
+        <label
+          >Celsius:
+          <input name="cel" size="10" type="text" oninput="celsius"/>
+          <span id="cel"></span>
+        </label>
+        <label
+          >Fahrenheit:
+          <input name="far" size="10" type="text" oninput="far" />
+        </label>
+        <label
+          >Kelvin:
+          <input name="kelvin" size="10" type="text" oninput="kelvin" />
+        </label>
+      </form>
+    </div>
+<script>
+    let celsius=document.getElementById('cel');
+    let far=document.getElementById('far');
+    let kelvin=document.getElementById('kelvin');
+    celsius.oninput=function(){
+        let f=(parseFloat(celsius.value)*9)/5+32;
+        far.value=parseFloat(f.toFixed(2));
+   
+
+        let k=(parseFloat(celsius.value)+273.15);
+        kelvin.value=parseFloat(k.toFixed(2));
+    }
+    far.oninput=function(){
+        let c=((parseFloat(far.value)-32)*5/9);
+        celsius.value=parseFloat(c.toFixed(2));
+
+        let k=(parseFloat(far.value)-32)*5/9+273.15;
+        kelvin.value=parseFloat(k.toFixed(2));
+    }
+    kelvin.oninput=function(){
+        let f=(parseFloat(kelvin.value)-273.15)*9/5+32;
+        far.value=parseFloat(f.toFixed(2));
+        
+        let c=(parseFloat(kelvin.value)-273.15);
+        celsius.value=parseFloat(c.toFixed(2));
+    }
+</script>
+    <!-- You can remove the instructions below -->
+    <div class="instruction">
+      <p>
+        Use JavaScript to finish this temperature converter that changes values
+        of the other two temperatures based on
+        <strong>change of one input</strong>. Show a warning message if
+        non-numerical character is entered. You need to use
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput"
+          ><code>oninput</code></a
+        >
+        property. See the demo below.
+      </p>
+     
+    </div>
+  </body>
+</html>

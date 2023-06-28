@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 2-2: KCarleton</title>
+    <caption>
+      AirPods
+    </caption>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        gap: 0px;
+        padding: 10px;
+      }
+      .grid-container > div {
+        background-color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+        border: 1px solid lightgray;
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        font-size: 10px;
+      }
+
+      .item1 {
+        grid-row: 1 / span 4;
+        grid-column: 1 / span 2;
+      }
+      .item2 {
+        grid-row: 5 / span 3;
+        grid-column: 1 / span 2;
+      }
+      .item3 {
+        grid-row: 1 / span 4;
+        grid-column: 3 / span 2;
+      }
+      .item4 {
+        grid-row: 5 / span 3;
+        grid-column: 3 / span 2;
+      }
+      .item5 {
+        grid-row: 1 / span 4;
+        grid-column: 5 / span 2;
+      }
+      .item6 {
+        grid-row: 5 / span 2;
+        grid-column: 5 / span 2;
+      }
+      .item7 {
+        grid-row: 7 / span 1;
+        grid-column: 5 / span 2;
+      }
+      .item8 {
+        grid-row: 1 / span 4;
+        grid-column: 7 / span 2;
+      }
+      .item9 {
+        grid-row: 5 / span 2;
+        grid-column: 7 / span 2;
+      }
+      .item10 {
+        grid-row: 7 / span 1;
+        grid-column: 7 / span 2;
+      }
+      .item11 {
+        grid-row: 1 / span 3;
+        grid-column: 9 / span 1;
+      }
+      .item12 {
+        grid-row: 5 / span 2;
+        grid-column: 9 / span 1;
+      }
+      .item13 {
+        grid-row: 7 / span 2;
+        grid-column: 9 / span 1;
+      }
+      #corner {
+        background-color: #0071e3;
+        border: none;
+        color: white;
+        padding: 2px 3px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 30px 1px;
+        border-radius: 50px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item1">AirPods Pro</div>
+      <div class="item2">AirPods</div>
+      <div class="item3">
+        <img
+          src="images/airpods-pro.jpg"
+          alt="Airpods Pro"
+          title="Airpods Pro"
+        />
+      </div>
+      <div class="item4">
+        <img src="images/airpods.jpg" alt="Airpods" title="AirPods" />
+      </div>
+      <div class="item5">AirPods Pro (2nd generation)</div>
+      <div class="item6">
+        AirPods (3rd generation) with Lightning Charging Case
+      </div>
+      <div class="item7">AirPods (2nd generation)</div>
+      <div class="item8">$249.00</div>
+      <div class="item9">$169.00</div>
+      <div class="item10">$129.00</div>
+      <div class="item11" id="corner">
+        <a
+          href="https://www.apple.com/shop/product/MQD83AM/A/airpods-pro"
+          alt="AirPods Pro"
+          title="AirPods Pro (2nd generation)"
+          >Buy</a
+        >
+      </div>
+      <div class="item12" id="corner">
+        <a
+          href="https://www.apple.com/shop/product/MME73AM/A/airpods-3rd-generation-with-magsafe-charging-case"
+          alt="Airpods (3rd generation)"
+          title="Airpods (3rd generation)"
+          >Buy</a
+        >
+      </div>
+      <div class="item13" id="corner">
+        <a
+          href="https://www.apple.com/shop/product/MV7N2AM/A/airpods-with-charging-case"
+          alt="Airpods (2nd generation)"
+          title="AirPods (2nd generation)"
+          >Buy</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+<!--I, Kayla Carleton, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work -->
