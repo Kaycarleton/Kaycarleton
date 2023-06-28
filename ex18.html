@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 18</title>
+  </head>
+  <body>
+    <img src="" alt="" />
+
+    <script>
+      //create global variables for imageArray, index
+
+      //display the image at index
+      const slides = [
+        "images/tiger1.jpg",
+        "images/tiger2.jpg",
+        "images/tiger3.jpg",
+        "images/tiger4.jpg",
+      ];
+
+      const COLORS=['yellow', 'red', 'blue', 'green'];
+      const CAPTIONS=[];
+      let index = 0;
+      const imgEl = document.querySelector("img");
+      
+      
+      function slideShow() {
+        //if the index is equal to the length of the Array 
+        //reset index to 0
+        if(index ==slides.length){
+            index=0;
+        }
+
+
+        imgEl.src=slides[index];
+
+//change the color of imgEl to COLORS[index]
+imgEl.style.border="10px solid"+COLORS[index]
+        //change the index by adding 1
+        index++;
+
+
+       //setTimeout(slideShow, 1000)
+        setTimeout(slideShow, 2000);
+      }
+
+      document.querySelector("body").onload = function () {
+        slideShow();
+      };
+    </script>
+  </body>
+</html>

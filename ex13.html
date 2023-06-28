@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 13</title>
+    <style>
+        img{
+            display: block;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Manipulating Styles and Images</h1>
+    <div>
+      <img
+        src="images/tiger1.jpg"
+        alt="Tiger 1"
+        title="Tiger is walking"
+        width="400"
+        id="tiger1"
+      />
+    </div>
+
+    <script>
+      function enlargeImage() {
+        console.log("... starting function enlargeImage..."); // test whether this function is correctly called
+
+        /* Pseudo-code
+        1. Find the image and assign it to a const variable, imageEl
+        2. Get the width/height of the image, assign the value to a variable, w
+        3. increase w by multiplying by 1.3
+        4. Assign the new w back to width/height of the image
+        */
+       const imageEl=document.getElementbyId("tiger1");
+       let w=imageEl.width;
+       w=w/1.3
+
+        // 1. Find the image and assign it to a const variable, imageEl
+        const imageEl = document.getElementById("tiger1");
+        // 2. Get the width/height of the image, assign the value to a variable, w
+        let w = imageEl;
+        // 3. increase w by multiplying by 1.3
+        w *= 1.2;
+        // 4. Assign the new w back to width/height of the image
+        imageEl.width = w;
+      }
+
+      document
+        .getElementById("tiger1")
+        .addEventListener("mouseover", function () {
+          enlargeImage();
+        });
+    </script>
+  </body>
+</html>
