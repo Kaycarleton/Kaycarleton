@@ -1,0 +1,116 @@
+.logo {
+    height: 130px;
+    width: 180px;
+  }
+
+  .paddingLogo {
+    padding-bottom: 70px;
+  }
+
+  .nav-bar header {
+    text-align: center;
+  }
+  .right-icons {
+    list-style: none;
+    text-align: right;
+  }
+  .home-button {
+    height: 30px;
+    width: 30px;
+  }
+  .shopping-button {
+    height: 30px;
+    width: 30px;
+  }
+  .search-button {
+    height: 30px;
+    width: 30px;
+  }
+  .navbar-navbar-default {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: black;
+    background-color: #08bdbd;
+  }
+  .collapse-navbar-collapse {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: black;
+    font-size: 30px;
+    
+  }
+  .navbar-collapse-1 {
+    text-decoration: none;
+    background-color: #75b709;
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+  #accordion div img {
+    display: none;
+  }
+
+  #accordion div .active {
+    display: block;
+  }
+  .shop{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, bold;
+  }
+  .popular-brands{
+    width: 50px;
+    text-decoration: none;
+    /* border: 1px solid #000; */
+  }
+  .section.footer {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif bold;
+}
+.social-image{
+width: 60px;
+height: 60px;
+padding:10px;
+}
+.collapse-navbar-collapse{
+width: 30px;
+height: 30px;
+}
+.firstpic{
+align-items:right;
+padding: 100px;
+/* background-size: cover;
+background-image: url("images/firstimage.png"); */
+width: 75vw;
+height: 600px;
+margin-top: 65px;
+}
+.secondpic{
+align-items: right;
+padding: 100px;
+}
+
+.responsiveImg {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 30px;
+  }
+
+  .tealBanner {
+    background-color: #08bdbd;
+    font-size: 5vw;
+    font-weight: bolder;
+    text-align: center;
+    margin: 50px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+  }
+.nav-toggler{
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: var(--bs-navbar-color);
+    background-color: transparent;
+    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+}
