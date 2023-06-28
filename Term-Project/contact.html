@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <style>
+h1{
+    text-align: center;
+    font-family: 'Satisfy',cursive;
+    background-color: rgb(255,193,177);
+   
+}
+#comment{
+    width: 50%;
+    height: 50%;
+}
+ul{
+      list-style-type: none;
+      margin:0;
+      padding: 0;
+      overflow: hidden;
+      background-color: cornsilk;
+      font-family:'Playfair Display', serif ;
+    }
+    li{
+      float: left;
+    }
+    li a{
+      display: block;
+       color: black;
+       text-align:center;
+       padding: 14px 16px;
+       text-decoration: none;
+    }
+    li a:hover{
+      background-color: cornflowerblue;
+    }
+    .comment{
+        height: 300px;
+        font: 12pt;
+    }
+    body{
+        background-color: cornsilk;
+    }
+    form{
+        font-family: 'Playfair Display' ,serif;
+    }
+    img{
+      width: 50%;
+    }
+   
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li><a class="active" href='index.html'>Home</a></li>
+        <li><a href="visit.html">Visit</a></li>
+        <li><a href='todo.html'>To Do</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+      <h1>Feedback!</h1>
+    <form>
+      <label for="fname">First Name:</label><br>
+      <input type="text" id="fname" name="fname" value=""><br>
+      <label for="lname">Last Name:</label><br>
+      <input type="text" id="lname" name="lname" value=""><br> <br>
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email" value=""> <br> <br>
+      
+<label for="comment">Feedback:</label><br>
+<input type="text" id="comment" name="comment" value="">
+
+<button conclick="myFunction()">Submit</button>
+<p id="demo"></p>
+    </form>
+  <img src="images/balloon.jpg" alt="Balloons!" title="Balloons!">
+<script>
+  function myFunction(){
+    let text;
+    let person=prompt ("Did you enjoy the website?", "Yes");
+    if(person==null || person=="") {
+      text-"User cancelled the prompt."; }
+      else {
+        text-"Thank you!"+ person + "Have a good day!";
+      }
+      document.getElementById("demo").innerHTML-text;
+    } 
+  
+</script>
+
+</body>
+</html>
