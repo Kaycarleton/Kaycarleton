@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index-KCarleton</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<link ref="http://www.kcarleton.me/">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+  
+    ul{
+      list-style-type: none;
+      margin:0;
+      padding: 0;
+      overflow: hidden;
+      background-color: cornsilk;
+      font-family:'Playfair Display', serif ;
+    }
+    li{
+      float: left;
+    }
+    li a{
+      display: block;
+       color: black;
+       text-align:center;
+       padding: 14px 16px;
+       text-decoration: none;
+    }
+    li a:hover{
+      background-color: cornflowerblue;
+    }
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black solid bold;
+        text-align: center;
+        font-family: 'Satisfy',cursive;
+        font-size: 30pt;
+      }
+      .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 0px;
+      }
+      .grid-container > div{
+       
+        text-align: center;
+        padding: 0px 0;
+        font-size: 40px;
+      }
+  .item1{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    width: 0%;
+  }
+  .item2{
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    width:20%;
+  
+  }
+  .item3{
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 10;
+    grid-row-end: 11;
+    width:10%;
+  }
+  .item4{
+    grid-column: 1/5;
+   grid-row: 1/10;
+  font-family:'Playfair Display', serif;
+
+  }
+img.resize{
+  width: 50%;
+  height: 50%;
+}
+.popup{
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+     
+    }
+    .popup .popuptext{
+      visibility: hidden;
+      width: 160px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    }
+    .popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+    }
+    .popup .show{
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+ 
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a class="active" href=#home>Home</a></li>
+      <li><a href="visit.html">Visit</a></li>
+      <li><a href="todo.html">To Do</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      
+    </ul>
+    <div class="w3-container w3-center w2-animate-top"><h1>Welcome to Trip Guide!</h1></div>
+  
+ <div class="grid-container">
+  
+  <div class="item2">
+    <img src="images/mountains.jpg" alt="Mountains" title="Mountains!">
+  </div>
+
+<div class="item4"> Trip Guide is the resource for all of your traveling needs. On this
+    website you will find helpful tips, activities to do, and a detailed list of top countries! Use the navigation bar above to start exploring
+    your next destination!</div>
+
+ </div>
+ 
+ <div class="popup" onclick="myFunction()">Click me!
+   <span class="popuptext" id="myPopup">Don't forget to leave feedback!</span>
+ </div>
+ <script>
+  function myFunction() {
+var popup = document.getElementById("myPopup");
+popup.classList.toggle("show");
+  }
+</script>
+</body>
+</html>
