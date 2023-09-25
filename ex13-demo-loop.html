@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 13</title>
+    <style>
+      img {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Manipulating Styles and Images</h1>
+
+    <div>
+      <img
+        src="images/tiger1.jpg"
+        alt="Tiger 1"
+        title="Tiger is walking"
+        width="400"
+        id="tiger1"
+      />
+      <img
+        src="images/tiger2.jpg"
+        alt="Tiger 2"
+        title="Tiger is looking at me"
+        width="400"
+        id="tiger2"
+      />
+      <img
+        src="images/tiger3.jpg"
+        alt="Tiger 3"
+        title="Tiger is looking left"
+        width="400"
+        id="tiger3"
+      />
+    </div>
+
+    <script>
+      function enlarge(x) {
+        let i = document.getElementById(x);
+        let w = i.width;
+        w = w * 1.5;
+        i.width = w;
+      }
+
+      function shrink(x) {
+        let i = document.getElementById(x);
+        let w = i.width;
+        w = w / 1.5;
+        i.width = w;
+        document.querySelector("h1").innerHTML =
+          "Manipulating Styles and Images";
+      }
+
+      // Use for loop
+      //   let images = document.querySelectorAll("img");
+      //   for (let index = 0; index < images.length; index++) {
+      //     const element = images[index];
+      //     element.addEventListener("mouseover", function () {
+      //       enlarge(this.id);
+      //     });
+      //     element.addEventListener("mouseout", function () {
+      //       shrink(this.id);
+      //     });
+      //   }
+
+      // Use for ... of ...
+      //   let images = document.querySelectorAll("img");
+      //   for (image of images) {
+      //     image.addEventListener("mouseover", function () {
+      //       enlarge(this.id);
+      //     });
+      //     image.addEventListener("mouseout", function () {
+      //       shrink(this.id);
+      //     });
+      //   }
+
+      // use Array.forEach()
+      document.querySelectorAll("img").forEach((element) => {
+        element.addEventListener("mouseover", function () {
+          enlarge(this.id);
+        });
+        element.addEventListener("mouseout", function () {
+          shrink(this.id);
+        });
+      });
+    </script>
+  </body>
+</html>

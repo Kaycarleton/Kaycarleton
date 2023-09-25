@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework2-3: KCarleton</title>
+    <style>
+      form {
+        font-family: arial;
+        margin: 50px auto;
+        padding: 40px;
+        width: 400px;
+        color: black;
+      }
+      fieldset {
+        border: solid 2px;
+        color: lightgray;
+     
+    
+      }
+      legend {
+        color: black;
+        
+      }
+     
+      body {
+        background-color: palevioletred;
+      }
+      h1 {
+        text-align: center;
+        font:arial;
+       
+      }
+      label{
+    color:black;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <h1>Customer Feedback</h1>
+    <form method="post" action="https://oim-apis.herokuapp.com/form">
+      <fieldset>
+        <legend><b>Your Information:</b></legend>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name here"
+          maxlength="100"
+        />
+        <br />
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter your email here"
+          maxlength="100"
+        />
+        <br />
+        <label for="country">Country:</label>
+        <input id="country" type="text" list="country-choices" />
+        <datalist id="country-choices">
+          <option value="United States"></option>
+          <option value="China"></option>
+          <option value="Brazil"></option>
+          <option value="India"></option>
+        </datalist>
+      </fieldset>
+      <fieldset>
+        <legend><b>Your Review:</b></legend>
+        <label for="product">What Apple product did you purchase?</label>
+        <input id="product" type="text" list="product-choices" />
+        <datalist id="product-choices">
+          <option value="Airpods Pro"></option>
+          <option value="Airpods (2nd generation)"></option>
+          <option value="Airpods (3rd generation)"></option>
+        </datalist>
+        <legend>What do you think of this product?</legend>
+        <label for="great">Great</label>
+        <input
+          type="radio"
+          name="level"
+          id="Great"
+          value="Great"
+          class="level"
+        />
+        <label for="awesome">Awesome</label>
+        <input
+          type="radio"
+          name="level"
+          id="Awesome"
+          value="Awesome"
+          class="level"
+        />
+        <label for="good">Good</label>
+        <input type="radio" name="level" id="Good" value="Good" class="level" />
+        <div>
+          <div>
+            <label for="comments">Comments:</label>
+          </div>
+        </div>
+        <div>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="5"
+            cols="25"
+            placeholder="Enter your comment here"
+          ></textarea>
+        </div>
+        <label for="sign"> Sign me up for email updates</label>
+        <input type="checkbox" name="sign" id="sign" values="sign" checked />
+        <br>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </fieldset>
+    </form>
+  </body>
+</html>

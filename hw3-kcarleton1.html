@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>hw3-1</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <style>
+  </style>
+  <body>
+    <h1 class="center">Celtics Player's Name Goes Here</h1>
+    <div class="center">
+      <img
+        alt="Image Goes Here"
+        src="images/jayson-tatum.png"
+        title="Player's Name"
+        id="celtics-image"
+      />
+    </div>
+    
+    <div class="center">
+      <button onclick="document.getElementById('horford').src='images/al-horford.png'">Al Horford</button>
+      <button  >Jaylen Brown</button>
+      <button >Jayson Tatum</button>
+      <button >Payton Pritchard</button>
+    </div>
+    <img id="horford" src="images/al-horford.png">
+<script>
+function showImage(){
+var image = document.getElementById('celtics-image');
+if(){
+    img.src="images/al-horford.png";
+} else if (){
+img.src="images/jaylen-brown.png";
+} else if(){
+img.src="images/jayson-tatum.png"
+}else if(){
+img.src="images/payton-pritchard.png";
+}
+
+}
+
+
+
+  document.querySelector("img").onclick=function(){
+    showImage();
+  };
+</script>
+    <!-- You can remove the instructions below -->
+    <div class="instruction">
+      <p>
+        Use internal (or external) JavaScript to implement the features below:
+      </p>
+      <ol>
+        <li>
+          Display image of the player corresponding to the button the user
+          clicks on.
+        </li>
+        <li>
+          Change the color of the image border based on the button displayed:
+          yellow for Al, red for Jaylen, green for Jayson and lime for Payton.
+          If my color choices are poor, you can pick your own colors as long as
+          it is different and unique for each image.
+        </li>
+        <li>
+          Change the heading, "Celtics Player's Name Goes Here" to the name of
+          player shown.
+        </li>
+        <li>
+          Change the background color of the button that the user clicks on to
+          Silver. Only the button the user has clicked on must be Silver. All
+          others must be White.
+        </li>
+        <li>
+          Enlarge the image by 25% when the user mouses-over it and return it to
+          normal size when the user mouses-out of the image.
+        </li>
+        <li>
+          (Optional) Try <code>Array</code> and <code>for</code>, loop so only one function is needed for 1-4.
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>
